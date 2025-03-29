@@ -30,12 +30,6 @@ authForm.addEventListener("submit", async (e) => {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
-    if (!username || !password) {
-        message.textContent = "Please fill in all fields.";
-        message.classList.add("text-red-500");
-        return;
-    }
-
     if (isRegistering) {
         if (localStorage.getItem(username)) {
             message.textContent = "Username already exists!";
