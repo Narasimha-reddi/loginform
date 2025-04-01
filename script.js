@@ -46,9 +46,11 @@ authForm.addEventListener("submit", async (e) => {
         
         if (storedHashedPassword && storedHashedPassword === hashedPassword) {
             message.textContent = "Login successful!";
-            message.classList.replace("text-red-500", "text-green-500");
+            message.classList.remove("text-red-500");
+            message.classList.add("text-green-500");
         } else {
             message.textContent = "Login unsuccessful!";
+            message.classList.remove("text-green-500");
             message.classList.add("text-red-500");
         }
     }
