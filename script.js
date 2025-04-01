@@ -53,4 +53,4 @@ authForm.addEventListener("submit", async (e) => {
         }
     }
     authForm.reset();
-});
+}); 
